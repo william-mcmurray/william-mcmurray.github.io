@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William McMurray — Resume</title>
+    <meta name="description" content="William McMurray — Senior Growth Analyst at Heidi Health. GTM analytics, data products and AI-native analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #15171c;
+            --ink-2: #3b404c;
+            --muted: #6c7180;
+            --accent: #2a36a0;
+            --accent-2: #4f5bd5;
+            --accent-soft: #eef0fb;
+            --rule: #e2e4ea;
+            --surface: #ffffff;
+            --page-bg: #f3f3ef;
+            --serif: 'DM Serif Display', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            background: var(--page-bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.55;
+            padding: 2.5rem 1rem 3rem;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+        /* ── Toolbar (screen only) ───────────────── */
+        .toolbar {
+            max-width: 860px;
+            margin: 0 auto 0.9rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--ink-2);
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: 999px;
+            padding: 0.4rem 0.95rem;
+            box-shadow: 0 1px 2px rgba(20, 22, 30, 0.05);
+        }
+
+        .btn:hover { color: var(--accent); border-color: var(--accent-2); text-decoration: none; }
+        .btn svg { width: 14px; height: 14px; }
+
+        /* ── Page ────────────────────────────────── */
+        .page {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--surface);
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(20, 22, 30, 0.05), 0 12px 40px rgba(20, 22, 30, 0.07);
+            padding: 3rem 3.4rem 2.6rem;
+            border-top: 5px solid var(--accent);
+        }
+
+        /* ── Header ──────────────────────────────── */
+        header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.5rem;
+            align-items: end;
+            padding-bottom: 1.6rem;
+            margin-bottom: 1.9rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        header h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 2.85rem;
+            line-height: 1.02;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+            margin-bottom: 0.55rem;
+        }
+
+        .current-role {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .current-role .at { color: var(--accent); }
+
+        .tagline {
+            margin-top: 0.2rem;
+            font-size: 0.86rem;
+            color: var(--muted);
+        }
+
+        .contact {
+            list-style: none;
+            font-size: 0.82rem;
+            color: var(--ink-2);
+            text-align: right;
+            line-height: 1.75;
+        }
+
+        .contact li { white-space: nowrap; }
+
+        .rec-link {
+            display: inline-block;
+            margin-top: 0.35rem;
+            font-weight: 500;
+            font-size: 0.78rem;
+            background: var(--accent-soft);
+            padding: 0.18rem 0.65rem;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        /* ── Section headings ────────────────────── */
+        section { margin-bottom: 1.9rem; }
+        section:last-of-type { margin-bottom: 0; }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--accent);
+            margin-bottom: 1.1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+        }
+
+        /* ── Skills ──────────────────────────────── */
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+        }
+
+        .skill {
+            background: #fafafc;
+            border: 1px solid var(--rule);
+            border-radius: 6px;
+            padding: 0.75rem 0.95rem;
+        }
+
+        .skill.wide { grid-column: 1 / -1; }
+
+        .skill h3 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ink);
+            margin-bottom: 0.3rem;
+        }
+
+        .skill p {
+            font-size: 0.84rem;
+            color: var(--ink-2);
+            line-height: 1.5;
+        }
+
+        /* ── Experience ──────────────────────────── */
+        .org { margin-bottom: 1.45rem; }
+        .org:last-child { margin-bottom: 0; }
+
+        .org-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .org-name {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 1.28rem;
+            color: var(--ink);
+            line-height: 1.2;
+        }
+
+        .org-span {
+            font-size: 0.78rem;
+            color: var(--muted);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pos { position: relative; }
+        .pos + .pos { margin-top: 0.95rem; }
+
+        /* Timeline for organisations with several roles */
+        .org.multi .pos {
+            margin-left: 6px;
+            padding-left: 1.15rem;
+            border-left: 2px solid var(--rule);
+        }
+
+        .org.multi .pos::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0.42rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 2px solid var(--accent-2);
+        }
+
+        .org.multi .pos:first-of-type::before { background: var(--accent-2); }
+
+        .pos-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .pos-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--accent);
+        }
+
+        .pos-date {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--ink-2);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pos-meta {
+            font-size: 0.76rem;
+            color: var(--muted);
+            margin-left: 0.55rem;
+            white-space: nowrap;
+        }
+
+        .pos-meta::before { content: '·'; margin-right: 0.55rem; color: var(--rule); font-weight: 700; }
+
+        .pos-summary {
+            font-size: 0.88rem;
+            color: var(--ink-2);
+            margin-top: 0.4rem;
+        }
+
+        .pos ul {
+            list-style: none;
+            margin-top: 0.4rem;
+        }
+
+        .pos li {
+            position: relative;
+            padding-left: 1rem;
+            font-size: 0.87rem;
+            color: var(--ink-2);
+            line-height: 1.52;
+            margin-bottom: 0.28rem;
+        }
+
+        .pos li::before {
+            content: '';
+            position: absolute;
+            left: 0.1rem;
+            top: 0.62em;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent-2);
+        }
+
+        .pos li.award::before {
+            content: '★';
+            width: auto;
+            height: auto;
+            background: none;
+            color: var(--accent-2);
+            font-size: 0.68rem;
+            top: 0.18em;
+            left: 0;
+        }
+
+        .hl { color: var(--ink); font-weight: 600; }
+
+        /* ── Education ───────────────────────────── */
+        .edu { margin-bottom: 0.85rem; }
+        .edu:last-child { margin-bottom: 0; }
+
+        .edu-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .edu-title { font-weight: 600; font-size: 0.92rem; color: var(--ink); }
+        .edu-school { font-size: 0.84rem; color: var(--accent); font-weight: 500; }
+        .edu-date { font-size: 0.8rem; color: var(--ink-2); font-weight: 500; white-space: nowrap; }
+
+        .edu ul { list-style: none; margin-top: 0.25rem; }
+
+        .edu li {
+            position: relative;
+            padding-left: 1rem;
+            font-size: 0.84rem;
+            color: var(--ink-2);
+            margin-bottom: 0.15rem;
+        }
+
+        .edu li::before {
+            content: '';
+            position: absolute;
+            left: 0.1rem;
+            top: 0.62em;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent-2);
+        }
+
+        /* ── Footer ──────────────────────────────── */
+        .footer-note {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 1.8rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--rule);
+            letter-spacing: 0.02em;
+        }
+
+        /* ── Responsive ──────────────────────────── */
+        @media (max-width: 680px) {
+            body { padding: 1rem 0.75rem 2rem; }
+            .page { padding: 1.8rem 1.3rem; }
+            header { grid-template-columns: 1fr; align-items: start; gap: 1rem; }
+            header h1 { font-size: 2.2rem; }
+            .contact { text-align: left; }
+            .skills { grid-template-columns: 1fr; }
+            .org-head, .pos-head, .edu-head { flex-direction: column; gap: 0.1rem; }
+        }
+
+        /* ── Print / PDF ─────────────────────────── */
+        @page { size: A4; margin: 10mm 13mm 9mm; }
+
+        @media print {
+            html { font-size: 11.6px; }
+            .page { border-top-width: 4px; }
+            header { padding-bottom: 1.2rem; margin-bottom: 1.4rem; }
+            section { margin-bottom: 1.4rem; }
+            .section-title { margin-bottom: 0.85rem; }
+            .org { margin-bottom: 1.1rem; }
+            .pos + .pos { margin-top: 0.75rem; }
+            .pos li { margin-bottom: 0.18rem; }
+            .skills { gap: 0.5rem; }
+            .skill { padding: 0.6rem 0.85rem; }
+            .footer-note { margin-top: 1rem; padding-top: 0.6rem; }
+            .edu { margin-bottom: 0.6rem; }
+            body { background: none; padding: 0; }
+            .toolbar { display: none; }
+            .page {
+                max-width: none;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 1.3rem 0 0;
+                border-top-width: 4px;
+            }
+            .org-head, .pos-head, .edu-head, .skill { break-inside: avoid; }
+            .pos li, .edu li { break-inside: avoid; }
+            .section-title { break-after: avoid; }
+            .org-head { break-after: avoid; }
+            .pos-head, .pos-summary { break-after: avoid; }
+            a:hover { text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="toolbar">
+    <a class="btn" href="William-McMurray-Resume.pdf" download>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8.5M4.5 7 8 10.5 11.5 7M2.5 13.5h11"/></svg>
+        Download PDF
+    </a>
+</div>
+
+<main class="page">
+
+    <!-- ─── HEADER ─────────────────────────────────────────── -->
+    <header>
+        <div>
+            <h1>William McMurray</h1>
+            <div class="current-role">Senior Growth Analyst <span class="at">· Heidi Health</span></div>
+            <div class="tagline">GTM Analytics · Data Products · AI-Native Ways of Working</div>
+        </div>
+        <ul class="contact">
+            <li><a href="mailto:w.mcmurray97@gmail.com">w.mcmurray97@gmail.com</a></li>
+            <li>+61 401 470 017</li>
+            <li>Sydney, Australia</li>
+            <li><a class="rec-link" href="https://william-mcmurray.github.io/letter-of-rec/">Letter of Recommendation · Atlassian Manager ↗</a></li>
+        </ul>
+    </header>
+
+    <!-- ─── CORE SKILLS ───────────────────────────────────── -->
+    <section>
+        <h2 class="section-title">Core Skills &amp; Technologies</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Data &amp; Engineering</h3>
+                <p>Advanced SQL, Python, R, dbt, Machine Learning, Snowflake, Databricks, Microsoft SQL Server, AWS</p>
+            </div>
+            <div class="skill">
+                <h3>AI &amp; Automation</h3>
+                <p>Claude / Claude Code, agentic AI workflows, AI harnesses, reusable prompts and skills, semantic layers</p>
+            </div>
+            <div class="skill">
+                <h3>Visualisation &amp; Reporting</h3>
+                <p>Advanced Tableau, Advanced Excel / Google Sheets, Power BI, Looker Studio (formerly Google Data Studio), Cognos</p>
+            </div>
+            <div class="skill">
+                <h3>Platforms &amp; CRM</h3>
+                <p>Salesforce (extensive), HubSpot, Atlassian Suite, Oracle Suite (EBS and Fusion), Shopify, MYOB, IRI, Quantium, IQVIA</p>
+            </div>
+            <div class="skill wide">
+                <h3>Ways of Working</h3>
+                <p>Data and strategy advocacy · End-to-end project ownership · Team leadership · Mentoring and capability building · Cross-functional partnership · External stakeholder engagement · Proactive problem solving and bias toward action</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ────────────────────────────────────── -->
+    <section>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <!-- Heidi Health -->
+        <article class="org">
+            <div class="org-head">
+                <h3 class="org-name">Heidi Health</h3>
+            </div>
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Senior Growth Analyst</span><span class="pos-meta">Full time</span></div>
+                    <span class="pos-date">Jul 2026 – Present</span>
+                </div>
+                <p class="pos-summary">Own GTM data modelling and analytics in a modern data stack, building trusted data foundations for GTM and revenue reporting.</p>
+                <ul>
+                    <li><span class="hl">End-to-end ownership of the GTM dbt DAGs.</span></li>
+                    <li><span class="hl">Delivering a full rebuild of the GTM DAGs</span> (primarily HubSpot data), targeting delivery within two months, enabled by an entirely AI-native workflow.</li>
+                    <li><span class="hl">Stood up the company's first billings model</span> and collections dashboards.</li>
+                    <li><span class="hl">Owned the data requirements for the customer value fund facility</span>, covering both the data-sharing pipeline and internal reporting.</li>
+                    <li>Contributed to enhancements of the team's <span class="hl">AI harness</span>.</li>
+                </ul>
+            </div>
+        </article>
+
+
+        <!-- Atlassian -->
+        <article class="org">
+            <div class="org-head">
+                <h3 class="org-name">Atlassian</h3>
+            </div>
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Senior Financial Analyst, Global Systems &amp; Planning</span><span class="pos-meta">Full time</span></div>
+                    <span class="pos-date">Jul 2025 – Apr 2026</span>
+                </div>
+                <p class="pos-summary">Managed GTM and Finance data alignment and enhancement initiatives, including forecasting and data model enhancements, and data quality analytics.</p>
+                <ul>
+                    <li><span class="hl">Drove 86% → 96% alignment</span> between GTM and Finance systems by rebuilding the source-of-truth schema for systems alignment.</li>
+                    <li><span class="hl">Engineered a Python/Databricks machine learning model</span> to automatically match Salesforce records with financial system-of-record data, eliminating manual reconciliation at scale.</li>
+                    <li><span class="hl">Defined and delivered enterprise data model enhancements</span>, including refund segmentation and the systems alignment schema.</li>
+                    <li><span class="hl">Managed the roadmap</span> for data product delivery across global stakeholders, translating complex business requirements into actionable specifications for engineering teams.</li>
+                    <li><span class="hl">Championed AI-native ways of working</span>, integrating Claude and other AI tools into day-to-day workflows; helped lay the foundations for an agent that reads the schema and produces reporting automatically, and progressed AI assets along an agentic maturity path through reusable prompts, skills and a semantic layer for business definitions.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Resmed -->
+        <article class="org multi">
+            <div class="org-head">
+                <h3 class="org-name">Resmed</h3>
+                <span class="org-span">Jun 2022 – Jul 2025</span>
+            </div>
+
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Revenue Analytics Manager, APAC</span><span class="pos-meta">Full time</span></div>
+                    <span class="pos-date">Jan 2025 – Jul 2025</span>
+                </div>
+                <p class="pos-summary">Expanded the ANZ remit to lead the development of analytics capabilities across APAC, partnering closely with APAC leadership and the Provider and D2C FP&amp;A/finance teams.</p>
+            </div>
+
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Analytics Lead, ANZ</span><span class="pos-meta">Full time</span></div>
+                    <span class="pos-date">Dec 2023 – Jan 2025</span>
+                </div>
+                <p class="pos-summary">Led the development of analytics capabilities for the ANZ business, partnering closely with ANZ leadership and the Provider and D2C FP&amp;A/finance teams.</p>
+                <ul>
+                    <li><span class="hl">Individually rebuilt the ANZ Wholesale GTM reporting data source</span>, delivering a step change in analysis agility, budgeting capability, and scope to link device/app diagnostics and usage data to GTM results.</li>
+                    <li><span class="hl">Delivered a business-first D2C customer data platform</span>: an actionable, unified dataset giving visibility of revenue and patient outcome opportunity at every step (pre- and post-purchase) of the patient journey.</li>
+                    <li>Sourced data from Snowflake using advanced SQL across complex datasets (window functions, CTEs, multi-level joins) for analytics, reporting and process improvement projects.</li>
+                    <li>Built dashboards that (1) inform business decisions with actionable insights, (2) measure and predict quality of care, (3) report on performance and (4) model opportunities with Resmed customers.</li>
+                    <li><span class="hl">Mentored and trained peers</span> across business functions through Tableau training sessions, and contributed to Resmed's global Analytics Centre of Excellence, including a globally adopted framework for analyst development.</li>
+                </ul>
+            </div>
+
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Commercial Business Analyst, ANZ</span><span class="pos-meta">Full time · Role expanded Dec 2022</span></div>
+                    <span class="pos-date">Jun 2022 – Dec 2023</span>
+                </div>
+                <ul>
+                    <li class="award">Awarded Resmed ANZ 2022 <span class="hl">"Rookie of the Year"</span>.</li>
+                    <li class="award">Awarded Resmed ANZ FY2023 <span class="hl">"Wholesale Sales Innovation Award"</span> for work on Resmed ANZ's largest government contract, delivering a step change in growth and patient care driven by data.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- NineSquared -->
+        <article class="org">
+            <div class="org-head">
+                <h3 class="org-name">NineSquared</h3>
+            </div>
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Economics Consulting Analyst (Summer Intern to Analyst)</span><span class="pos-meta">Part time, alongside Master's degree</span></div>
+                    <span class="pos-date">Dec 2021 – Jun 2022</span>
+                </div>
+                <p class="pos-summary">Invited to remain with the team as a part-time Analyst after completing a summer internship.</p>
+                <ul>
+                    <li>Constructed an economic analysis of the global "net-zero" mega-trend for NineSquared's Future of Mobility project.</li>
+                    <li>Researched the global and domestic unmanned aerial vehicle (UAV) market.</li>
+                    <li>Assisted with business process improvements.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- AUSA Hoops -->
+        <article class="org">
+            <div class="org-head">
+                <h3 class="org-name">AUSA Hoops</h3>
+            </div>
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Systems &amp; Processes Analyst (Consulting)</span><span class="pos-meta">Contract, alongside Master's degree</span></div>
+                    <span class="pos-date">May 2021 – Dec 2021</span>
+                </div>
+                <p class="pos-summary">Updated core business systems (CRM, marketing platforms, data management, customer support and engagement), integrated functions and optimised reporting.</p>
+                <ul>
+                    <li>Provided technical support to marketing, operations and sales.</li>
+                    <li>Redesigned ways of working, communication and operating processes within and between marketing, sales and operations.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Johnson & Johnson -->
+        <article class="org multi">
+            <div class="org-head">
+                <h3 class="org-name">Johnson &amp; Johnson Pacific</h3>
+                <span class="org-span">Nov 2018 – Nov 2020</span>
+            </div>
+
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Category Analyst</span><span class="pos-meta">Full time</span></div>
+                    <span class="pos-date">Sep 2019 – Nov 2020</span>
+                </div>
+                <p class="pos-summary">Supported the category team and wider business with data analysis, business tracking, new product launch support and category insights.</p>
+                <ul>
+                    <li>Delivered retail analytics, category reviews, customer presentations, growth opportunity analysis, RGM/4Ps, and consumer behaviour and transaction-data insights from Nielsen and Ex-Factory data.</li>
+                </ul>
+            </div>
+
+            <div class="pos">
+                <div class="pos-head">
+                    <div><span class="pos-title">Customer Development Executive (Inside Sales)</span><span class="pos-meta">Full time</span></div>
+                    <span class="pos-date">Nov 2018 – Sep 2019</span>
+                </div>
+                <p class="pos-summary">Managed ~1,200 pharmacies, building relationships and driving brand market share.</p>
+                <ul>
+                    <li>Assisted with the management of key state accounts, including minor wholesalers and small/medium-sized banners.</li>
+                    <li>Provided market insights to account managers using NIS (Nielsen) and Ex-Factory data.</li>
+                    <li>Ran regular data analysis to maximise team call/activity efficiency.</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <!-- ─── EDUCATION ─────────────────────────────────────── -->
+    <section>
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu">
+            <div class="edu-head">
+                <div><span class="edu-title">Master of Applied Economics</span> · <span class="edu-school">Macquarie University</span></div>
+                <span class="edu-date">2021 – 2022</span>
+            </div>
+            <ul>
+                <li>WAM: 82.875</li>
+                <li>Department of Economics Prize for Applied Macroeconomic Topics</li>
+                <li>Department of Economics Prize for Economic Development</li>
+            </ul>
+        </div>
+
+        <div class="edu">
+            <div class="edu-head">
+                <div><span class="edu-title">SQL Course: Level 2A</span> · <span class="edu-school">University of Sydney, Centre for Continuing Education</span></div>
+                <span class="edu-date">Oct 2022</span>
+            </div>
+        </div>
+
+        <div class="edu">
+            <div class="edu-head">
+                <div><span class="edu-title">Bachelor of Business Administration &amp; Bachelor of Arts (Economics)</span> · <span class="edu-school">Macquarie University</span></div>
+                <span class="edu-date">2015 – 2018</span>
+            </div>
+            <ul>
+                <li>GPA: 3.16 / 4.0</li>
+                <li>Department of Marketing and Management Prize for Leadership in Management</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer-note">Referees available upon request</div>
+
+</main>
+</body>
+</html>

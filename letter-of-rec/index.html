@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter of Recommendation - Kelson Ren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --ink: #1a1a1a;
+        --ink-light: #4a4a4a;
+        --ink-muted: #717171;
+        --accent: #1f2584;
+        --accent-light: #e8eef6;
+        --surface: #ffffff;
+        --rule: #d4d4d4;
+        --page-bg: #f0f0ec;
+        --serif: 'DM Serif Display', Georgia, serif;
+        --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+        font-size: 15px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        background: var(--page-bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-weight: 400;
+        line-height: 1.6;
+        padding: 2rem 1rem;
+    }
+
+    .page {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--surface);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 30px rgba(0,0,0,0.06);
+        border-radius: 2px;
+        padding: 3.2rem 3.6rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 1060px;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    /* ── Header ─────────────────── */
+    header {
+        text-align: center;
+        padding-bottom: 1.8rem;
+        border-bottom: 2px solid var(--ink);
+        margin-bottom: 2rem;
+    }
+
+    header h1 {
+        font-family: var(--sans);
+        font-size: 2.6rem;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        line-height: 1.15;
+        color: var(--ink);
+        margin-bottom: 0.35rem;
+    }
+
+    header .tagline {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--ink-light);
+        margin-bottom: 0.15rem;
+    }
+
+    header .tagline-italic {
+        font-size: 0.88rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--ink-muted);
+        margin-bottom: 1rem;
+    }
+
+    .contact-row {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 0.85rem;
+        color: var(--ink-light);
+    }
+
+    .contact-row a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    .contact-row a:hover { text-decoration: underline; }
+
+    /* ── Date ─────────────────── */
+    .date {
+        font-size: 0.85rem;
+        color: var(--ink-muted);
+        margin-bottom: 1.4rem;
+    }
+
+    /* ── Body paragraphs ─────── */
+    .body-paragraph {
+        font-size: 0.9rem;
+        color: var(--ink-light);
+        line-height: 1.65;
+        margin-bottom: 1rem;
+    }
+
+    .body-paragraph:first-of-type {
+        margin-bottom: 1rem;
+    }
+
+    /* ── Closing section ─────── */
+    .sincerely {
+        font-size: 0.9rem;
+        color: var(--ink-light);
+        margin-top: 1.4rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .sign-name {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-top: 1.4rem;
+        margin-bottom: 0.1rem;
+    }
+
+    .sign-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--accent);
+    }
+
+    /* ── Footer ───────────────── */
+    .footer-note {
+        text-align: center;
+        font-size: 0.82rem;
+        color: var(--ink-muted);
+        margin-top: 2rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--rule);
+    }
+
+    /* ── Print ────────────────── */
+    @media print {
+        body { background: none; padding: 0; }
+        .page { box-shadow: none; padding: 1.5rem 2rem; max-width: none; }
+    }
+
+    @media (max-width: 600px) {
+        .page { padding: 1.8rem 1.4rem; }
+        header h1 { font-size: 2rem; }
+        .contact-row { flex-direction: column; gap: 0.3rem; }
+    }
+</style>
+</head>
+<body>
+<div class="page">
+    <div class="content">
+
+        <!-- ─── HEADER ─────────────────────────────────────────── -->
+        <header>
+            <h1>Letter of Recommendation</h1>
+            <div class="tagline">For William McMurray</div>
+            <div class="tagline-italic">Former Senior Financial Analyst at Atlassian</div>
+            <div class="contact-row">
+                <span>Kelson Ren · Head of Finance Systems and Planning · Atlassian</span>
+            </div>
+            <div class="contact-row">
+                <span><a href="mailto:kren@atlassian.com">kren@atlassian.com</a></span>
+                <span>+61 421 762 592</span>
+            </div>
+        </header>
+
+        <div class="date">18 March 2026</div>
+
+        <p class="body-paragraph">To whom it may concern,</p>
+
+        <p class="body-paragraph">I strongly recommend William, a former senior financial analyst at Atlassian, for any financial and data analytics roles. I worked with him on multiple transformative projects for Atlassian Finance and observed his strong analytical skills, technical foundation, and commitment to using data to solve complex business problems. I am confident he will thrive in a rigorous, collaborative environment.</p>
+
+        <p class="body-paragraph">William consistently shows a strong data-driven mindset. He excels at translating ambiguous business questions into structured, data-focused analyses that yield actionable insights. He bases recommendations on empirical evidence, ensuring strategic decisions rest on solid analysis. William is also an excellent collaborator, able to explain complex analytical concepts to non-technical stakeholders, enabling cross-functional teams and senior leadership to grasp data-driven insights clearly.</p>
+
+        <p class="body-paragraph">Technically, William has strong data querying and engineering skills. He is proficient in advanced SQL, including window functions, CTEs, and multi-level joins, allowing him to extract insights from complex datasets. He handles large-scale data, optimizes queries for efficiency, and collaborates closely with Data Engineering and Data Science on projects, e.g. notably improving Sales and Finance data and metrics alignment, etc. Beyond analysis, William designed automated data pipelines and ETL processes that streamline reporting and save significant time for the finance team.</p>
+
+        <p class="body-paragraph">William has also developed skills in Tableau, Python, and machine learning. Using Tableau, he built critical dashboards addressing business needs, including reporting and bridging gap of Sales and Finance metrics. His developed dashboards have been heavily used to support EO facing monthly reports and financial outlook. He is comfortable across the full machine learning lifecycle, from exploratory data analysis and feature engineering to model deployment. Combining financial expertise with data science, he delivers measurable impact.</p>
+
+        <p class="body-paragraph">Beyond his technical strengths, William is intellectually curious and committed to continuous learning. He seeks opportunities to deepen his data analytics knowledge and apply advanced methods to complex challenges. I believe he will further develop these skills and contribute meaningfully to his next company.</p>
+
+        <p class="body-paragraph">I give William my highest recommendation. He has the analytical mindset, technical skills, and professional maturity to excel in his new role.</p>
+
+        <p class="body-paragraph">Please feel free to contact me if additional information would be helpful.</p>
+
+        <p class="sincerely">Sincerely,</p>
+
+        <div class="sign-name">Kelson Ren</div>
+        <div class="sign-title">Head of Finance Systems and Planning · Atlassian</div>
+    </div>
+
+    <div class="footer-note">Letter of Recommendation for William McMurray</div>
+</div>
+</body>
+</html>
